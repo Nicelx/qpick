@@ -7,5 +7,8 @@ export const initialState = {
 
 export const counterReducer = createReducer(
 	initialState,
-	on(addToCart, (state) => state.cart.push("string"))
+	on(addToCart, (state) => {
+		state.cart.push("string");
+		return state;
+	})
 );
