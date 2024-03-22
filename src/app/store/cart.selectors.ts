@@ -4,9 +4,6 @@ export interface AppState {
 	cart: string[];
 }
 
-export const selectCart = (state: AppState) => state.feature;
+export const selectCartFeature = (state: AppState) => state.cart;
 
-export const selectFeatureCount = createSelector(
-	selectFeature,
-	(state: FeatureState) => state.counter
-);
+export const selectCart = createSelector(selectCartFeature, (state: any) => state);

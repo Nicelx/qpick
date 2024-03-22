@@ -5,10 +5,11 @@ export const initialState = {
 	cart: [""],
 };
 
-export const counterReducer = createReducer(
+export const cartReducer = createReducer(
 	initialState,
 	on(addToCart, (state) => {
 		state.cart.push("string");
+		console.log("reducer log", state);
 		return state;
 	})
 );
