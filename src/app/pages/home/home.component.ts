@@ -4,11 +4,12 @@ import { addToCart } from "../../store/cart.actions";
 import { Observable } from "rxjs";
 import { selectCart } from "../../store/cart.selectors";
 import { CommonModule } from "@angular/common";
+import { ShopItemComponent } from "./shop-item/shop-item.component";
 
 @Component({
 	selector: "app-home",
 	standalone: true,
-	imports: [CommonModule],
+	imports: [CommonModule, ShopItemComponent],
 	templateUrl: "./home.component.html",
 	styleUrl: "./home.component.scss",
 })
