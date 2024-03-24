@@ -6,4 +6,4 @@ export interface AppState {
 
 export const selectCartFeature = (state: AppState) => state.cart;
 
-export const selectCart = createSelector(selectCartFeature, (state: any) => state);
+export const selectCart = createSelector(selectCartFeature, (state: any) => state.cart);

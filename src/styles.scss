@@ -1,9 +1,13 @@
+// @import url("./app/shared/_variables.scss");
+@use "_variables";
 /* You can add global styles to this file, and also import other style files */
 .wrapper {
 	width: 1110px;
 	margin: 0 auto;
 }
-
+body {
+	background-color: $color-gray;
+}
 /* Box sizing rules */
 *,
 *::before,

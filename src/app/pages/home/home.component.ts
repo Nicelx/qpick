@@ -19,6 +19,8 @@ export class HomeComponent {
 
 	onAddToCart(itemId: string) {
 		this.store.dispatch(addToCart());
+		let selectt = this.store.select("cart");
+		console.log("selectt", selectt);
 		this.cart$ = this.store.select("cart");
 		this.cart$.subscribe((result) => {
 			console.log(result);
