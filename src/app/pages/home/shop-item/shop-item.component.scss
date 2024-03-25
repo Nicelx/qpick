@@ -1,8 +1,69 @@
+@import "../../../shared/variables";
 .item {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	width: 350px;
 	height: 407px;
 	border-radius: 30px;
 	background: $color-white;
 	padding: 15px 18px 26px 22px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	font-size: 17px;
+	font-weight: 600;
+	line-height: 20px;
+
+	&__img-block {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__img {
+		width: 220px;
+		height: 237px;
+		margin-bottom: 54px;
+	}
+}
+
+.info-block {
+	display: flex;
+	justify-content: space-between;
+
+	&__name-part,
+	&__price-part {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 25px;
+	}
+	&__product-name {
+		color: $color-gray-3;
+	}
+	&__rating-block {
+		display: flex;
+		align-items: center;
+	}
+	&__rating {
+		margin-left: 10px;
+	}
+	&__price {
+		color: $color-primary;
+	}
+	&__price-block {
+		position: relative;
+	}
+	&__crossed-price {
+		position: absolute;
+		top: 18px;
+		left: 10px;
+		font-size: 13px;
+		line-height: 16px;
+		color: $color-sub-primary;
+		text-decoration: line-through;
+	}
+	&__buy {
+		background-color: $color-white;
+		border: none;
+		color: $color-black;
+	}
 }

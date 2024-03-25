@@ -1,0 +1,11 @@
+@import "../../shared/variables";
+.home__title {
+	font-size: 20px;
+	color: $color-gray-2;
+	margin-bottom: 20px;
+}
+.headphones {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	row-gap: 30px;
+}
