@@ -1,0 +1,21 @@
+@import "../variables";
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 60px;
+	margin-bottom: 28px;
+
+	&__title {
+		color: $color-gray-4;
+	}
+	&__icon-block {
+		display: flex;
+	}
+	&__link {
+		width: 60px;
+	}
+	&__icon {
+		margin: auto;
+	}
+}
