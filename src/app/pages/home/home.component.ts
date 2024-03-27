@@ -5,6 +5,8 @@ import { Observable } from "rxjs";
 import { selectCart } from "../../store/cart.selectors";
 import { CommonModule } from "@angular/common";
 import { ShopItemComponent } from "./shop-item/shop-item.component";
+import { Product } from "../../types";
+import { headphones, wirelessHeadphones } from "../../mock-data";
 
 @Component({
 	selector: "app-home",
@@ -16,6 +18,8 @@ import { ShopItemComponent } from "./shop-item/shop-item.component";
 export class HomeComponent {
 	constructor(private store: Store<{ cart: string[] }>) {}
 	cart$: Observable<string[]> = new Observable();
+	headphonesData: Product[] = headphones;
+	wirelessData: Product[] = wirelessHeadphones;
 
 	onAddToCart(itemId: string) {
 		this.store.dispatch(addToCart());

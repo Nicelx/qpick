@@ -4,8 +4,15 @@
 	color: $color-gray-2;
 	margin-bottom: 20px;
 }
-.headphones {
+.headphones,
+.wireless {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	row-gap: 30px;
+}
+.headphones {
+	margin-bottom: 28px;
+}
+.wireless {
+	margin-bottom: 20px;
 }

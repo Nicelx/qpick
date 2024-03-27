@@ -1,20 +1,22 @@
 <div class="item">
 	<div class="item__img-block">
-		<img class="item__img" src="../../../../assets/images/image-1.png" alt="product image" />
+		<img class="item__img" [src]="shopItemData.img" alt="product image" />
 	</div>
 	<div class="info-block">
 		<div class="info-block__name-part">
-			<span class="info-block__product-name">Apple sdfsf</span>
+			<span class="info-block__product-name">{{ shopItemData.title }}</span>
 
 			<div class="info-block__rating-block">
 				<img src="../../../../assets/svg/star.svg" alt="rating star" />
-				<span class="info-block__rating">4.3</span>
+				<span class="info-block__rating">{{ shopItemData.rate }}</span>
 			</div>
 		</div>
 		<div class="info-block__price-part">
 			<div class="info-block__price-block">
-				<span class="info-block__price">2927 ₽</span>
-				<span class="info-block__crossed-price">3527 ₽</span>
+				<span class="info-block__price">{{ shopItemData.price }} ₽</span>
+				<span *ngIf="shopItemData.oldPrice" class="info-block__crossed-price"
+					>{{ shopItemData.oldPrice }} ₽</span
+				>
 			</div>
 			<button class="info-block__buy">Купить</button>
 		</div>

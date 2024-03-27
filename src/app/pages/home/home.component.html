@@ -1,15 +1,12 @@
 <div class="home wrapper">
 	<h2 class="home__title">Наушники</h2>
 	<div class="headphones">
-		<app-shop-item></app-shop-item>
-		<app-shop-item></app-shop-item>
-		<app-shop-item></app-shop-item>
-		<app-shop-item></app-shop-item>
-		<app-shop-item></app-shop-item>
-		<app-shop-item></app-shop-item>
+		<app-shop-item *ngFor="let item of headphonesData" [shopItemData]="item"></app-shop-item>
 	</div>
 	<h2 class="home__title">Беспроводные наушники</h2>
-	<div class="wireless"></div>
+	<div class="wireless">
+		<app-shop-item *ngFor="let item of wirelessData" [shopItemData]="item"></app-shop-item>
+	</div>
 </div>
 <button (click)="onAddToCart('someId')">add to cart</button>
 <p>{{ cart$ | async }}</p>
