@@ -22,6 +22,17 @@ html {
 	text-size-adjust: none;
 }
 
+.title {
+	font-size: 25px;
+	line-height: 30px;
+	font-weight: 700;
+	color: $color-gray-4;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
 /* Remove default margin in favour of better control in authored CSS */
 body,
 h1,

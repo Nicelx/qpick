@@ -1,0 +1,11 @@
+.vertical-wrapper {
+	min-height: 100dvh;
+	display: flex;
+	flex-direction: column;
+	// display: grid;
+	// grid-template-rows: auto 1fr auto;
+	// grid-template-columns: minmax(0, 1fr);
+}
+app-footer {
+	justify-self: end;
+}

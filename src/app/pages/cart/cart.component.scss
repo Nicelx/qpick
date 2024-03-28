@@ -1,0 +1,14 @@
+@import "../../shared/variables";
+
+.cart {
+	&__title {
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 24px;
+		color: $color-gray-3;
+		margin-bottom: 13px;
+	}
+	&__products {
+		width: 57.05%;
+	}
+}
