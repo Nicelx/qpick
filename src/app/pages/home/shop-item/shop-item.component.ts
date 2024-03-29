@@ -1,6 +1,8 @@
 import { Component, Input } from "@angular/core";
 import { Product } from "../../../types";
+import { Store } from "@ngrx/store";
 import { CommonModule } from "@angular/common";
+import { addToCart } from "../../../store/cart.actions";
 
 @Component({
 	selector: "app-shop-item",
@@ -17,4 +19,9 @@ export class ShopItemComponent {
 		price: 0,
 		rate: 0,
 	};
+	constructor(private store: Store) {}
+
+	onAddToCart() {
+		this.store.dispatch(addToCart({ payload: this.shopItemData }));
+	}
 }

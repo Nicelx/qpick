@@ -1,15 +1,12 @@
 import { createReducer, on } from "@ngrx/store";
 import { addToCart } from "./cart.actions";
+import { Product } from "./../types";
 
-export const initialState = {
-	cart: [""],
-};
+export const initialState: Product[] = [];
 
-export const cartReducer = createReducer(
+export const counterReducer = createReducer(
 	initialState,
-	on(addToCart, (state) => {
-		state.cart.push("string");
-		console.log("reducer log", state);
-		return state;
+	on(addToCart, (state, { payload }) => {
+		return [...state, payload];
 	})
 );
