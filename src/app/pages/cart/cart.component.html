@@ -1,7 +1,16 @@
 <section class="cart wrapper">
 	<h2 class="cart__title">Корзина</h2>
-	<div class="cart__products">
-		<app-cart-item></app-cart-item>
+	<div class="cart__content-block">
+		<div class="cart__products">
+			<app-cart-item></app-cart-item>
+			<app-cart-item></app-cart-item>
+		</div>
+		<aside class="total">
+			<div class="total__total-amount">
+				<span class="total__total">ИТОГО</span>
+				<span class="total__total">₽ 2927 </span>
+			</div>
+			<button class="total__checkout">Перейти к оформлению</button>
+		</aside>
 	</div>
-	<aside class="cart__summ"></aside>
 </section>

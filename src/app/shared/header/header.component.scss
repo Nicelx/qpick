@@ -11,8 +11,23 @@
 	}
 	&__link {
 		width: 60px;
+		position: relative;
 	}
 	&__icon {
 		margin: auto;
+	}
+	&__badge {
+		position: absolute;
+		top: -8px;
+		right: 10px;
+		text-align: center;
+		width: 17.4px;
+		height: 17.4px;
+		background-color: $color-primary;
+		border-radius: 50%;
+		font-size: 15px;
+		line-height: 18px;
+		font-weight: 500;
+		color: $color-white;
 	}
 }
