@@ -4,7 +4,6 @@
 	background-color: $color-white;
 	border-radius: 30px 30px 0 0;
 	padding: 29px;
-	justify-self: end;
 
 	&__title {
 		margin-right: 22.18%;
@@ -29,6 +28,11 @@
 		font-weight: 400;
 		line-height: 20px;
 		text-decoration: none;
+		transition: all 0.4s ease-in-out;
+	}
+	&__link:hover,
+	&__link:focus {
+		color: $color-primary;
 	}
 	&__lang-block {
 		margin-top: 34px;
@@ -51,5 +55,34 @@
 		display: flex;
 		gap: 17.9px;
 		align-items: center;
+	}
+	&__social a {
+		transition: all 0.4s ease-in-out;
+	}
+	&__social a:hover,
+	&__social a:focus {
+		transform: translateY(-6px);
+	}
+}
+@media screen and (max-width: $breakpoint-md) {
+	.footer {
+		justify-content: space-between;
+		&__title,
+		&__links {
+			margin-right: 0;
+		}
+		&__links {
+			width: auto;
+			gap: 15px;
+		}
+	}
+}
+@media screen and (max-width: $breakpoint-sm) {
+	.footer {
+		flex-wrap: wrap;
+		& > * {
+			width: 100%;
+			margin-bottom: 20px;
+		}
 	}
 }

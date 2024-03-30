@@ -15,8 +15,4 @@ export class HomeComponent {
 	headphonesData: Product[] = headphones;
 	wirelessData: Product[] = wirelessHeadphones;
 	constructor() {}
-
-	// addToCart(product: Product) {
-	// 	this.store.dispatch(addToCart({ payload: product }));
-	// }
 }

@@ -65,5 +65,27 @@
 		background-color: $color-white;
 		border: none;
 		color: $color-black;
+		transition: all 0.2s ease-in;
+	}
+	&__buy:hover,
+	&__buy:focus {
+		color: $color-white;
+		background-color: $color-primary;
+		border-radius: 2px;
+	}
+}
+
+@media screen and (max-width: $breakpoint-xs) {
+	.item {
+		width: 250px;
+		height: 330px;
+		&__img {
+			width: auto;
+			height: 180px;
+			margin-bottom: 0;
+		}
+		&__img-block {
+			margin-bottom: 5px;
+		}
 	}
 }

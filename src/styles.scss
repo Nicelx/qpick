@@ -4,6 +4,13 @@
 	width: 1110px;
 	margin: 0 auto;
 }
+@media screen and (max-width: $breakpoint-md) {
+	.wrapper {
+		width: 100%;
+		padding: 0 10px;
+	}
+}
+
 body {
 	background-color: $color-gray;
 	font-family: "Montserrat", sans-serif;
@@ -27,6 +34,11 @@ html {
 	line-height: 30px;
 	font-weight: 700;
 	color: $color-gray-4;
+	transition: all 0.4s ease-in-out;
+}
+.title:hover {
+	color: $color-primary;
+	transform: scale(1.05);
 }
 
 button,

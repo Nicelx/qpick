@@ -16,3 +16,22 @@
 .wireless {
 	margin-bottom: 20px;
 }
+@media screen and (max-width: $breakpoint-md) {
+	.headphones,
+	.wireless {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 10px;
+	}
+	app-shop-item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+@media screen and (max-width: $breakpoint-sm) {
+	.headphones,
+	.wireless {
+		grid-template-columns: 1fr;
+		gap: 10px;
+	}
+}

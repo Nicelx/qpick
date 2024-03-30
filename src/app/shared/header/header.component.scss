@@ -12,6 +12,11 @@
 	&__link {
 		width: 60px;
 		position: relative;
+		transition: all 0.4s ease-in-out;
+	}
+	&__link:hover,
+	&__link:focus {
+		transform: scale(1.1);
 	}
 	&__icon {
 		margin: auto;
