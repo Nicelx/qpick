@@ -1,0 +1,54 @@
+@import "../../shared/variables";
+.checkout {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	&__form-block {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+	&__form {
+		width: 250px;
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		margin-bottom: 20px;
+	}
+	&__summary {
+		font-size: 22px;
+		font-weight: 700;
+	}
+	&__products {
+		background-color: $color-white;
+		padding: 20px;
+		border-radius: 3px;
+		height: fit-content;
+	}
+	&__order {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+}
+.product {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	border-bottom: 1px solid $color-gray-2;
+}
+h3 {
+	margin-bottom: 10px;
+}
+input,
+select,
+option,
+button {
+	padding: 10px;
+	border: none;
+	border-radius: 2px;
+}
+button {
+	width: 250px;
+	margin-bottom: 30px;
+}

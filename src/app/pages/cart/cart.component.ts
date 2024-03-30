@@ -5,11 +5,12 @@ import { Observable, empty, from, map, of, reduce, scan, switchMap, take, tap } 
 import { CartItem, Product } from "../../types";
 import { CommonModule } from "@angular/common";
 import { selectCart } from "../../store/cart.selectors";
+import { RouterLink } from "@angular/router";
 
 @Component({
 	selector: "app-cart",
 	standalone: true,
-	imports: [CartItemComponent, CommonModule],
+	imports: [CartItemComponent, CommonModule, RouterLink],
 	templateUrl: "./cart.component.html",
 	styleUrl: "./cart.component.scss",
 })
@@ -19,7 +20,6 @@ export class CartComponent {
 	constructor(private store: Store<{ cart: CartItem[] }>) {
 		this.$cart = this.store.select("cart");
 		this.$total = this.$cart.pipe(
-			tap((val) => console.log("tap val", val)),
 			switchMap((val: CartItem[], i: number) => {
 				let total = 0;
 				val.forEach((item: CartItem) => {

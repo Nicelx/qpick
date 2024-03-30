@@ -19,7 +19,7 @@ export const headphones: Product[] = [
 	},
 	{
 		id: uuid(),
-		title: "Apple EarPods",
+		title: "Apple EarPods SP",
 		img: "./assets/images/image-3.png",
 		price: 2327,
 		rate: 4.5,

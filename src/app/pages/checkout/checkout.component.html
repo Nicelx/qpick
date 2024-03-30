@@ -1,0 +1,65 @@
+<section class="checkout wrapper">
+	<div class="checkout__form-block">
+		<h2>Оформление заказа</h2>
+		<h3>Данные получателя</h3>
+		<form class="checkout__form" action="" [formGroup]="checkoutForm">
+			<label for="name">Имя: </label>
+			<input
+				id="name"
+				type="text"
+				placeholder="enter first name"
+				formControlName="firstName"
+			/>
+			<label for="lastName">Фамилия: </label>
+			<input
+				id="lastName"
+				type="text"
+				placeholder="enter last name"
+				formControlName="lastName"
+			/>
+			<label for="phone">Номер телефона: </label>
+			<input id="phone" type="tel" placeholder="+7900 000 00 00" formControlName="phone" />
+			<h3>Способ доставки</h3>
+			<label for="delivery">Способ получения: </label>
+			<select formControlName="delivery">
+				<option value="pickup">Самовывоз</option>
+				<option value="delivery">Доставка</option>
+			</select>
+			<label *ngIf="checkoutForm.get('delivery')?.value == 'pickup'" for="name"
+				>Выберите пункт самовывоза:
+			</label>
+			<select
+				*ngIf="checkoutForm.get('delivery')?.value == 'pickup'"
+				formControlName="pickupPoint"
+			>
+				<option value="1" ngDefaultControl>Краснозвездная д.8</option>
+				<option value="2">Пушкинская д.12</option>
+				<option value="3">Ленинградская д.1</option>
+				<option value="4">Остужевская д.2</option>
+			</select>
+			<label *ngIf="checkoutForm.get('delivery')?.value == 'delivery'" for="deliveryAddress"
+				>Укажите адресс доставки:
+			</label>
+			<input
+				*ngIf="checkoutForm.get('delivery')?.value == 'delivery'"
+				id="name"
+				type="text"
+				placeholder="enter delivery address"
+				formControlName="deliveryAddress"
+			/>
+		</form>
+		<div class="checkout__order" *ngIf="$total | async as total">
+			<span class="checkout__summary">Итого {{ total }} ₽</span>
+			<button (click)="onSendOrder(total)" type="submit">Оформить заказ</button>
+			<span *ngIf="isLoading">Loading</span>
+		</div>
+	</div>
+
+	<div class="checkout__products" *ngIf="$cart | async as cart">
+		<div class="product" *ngFor="let item of cart">
+			<span class="product__title">{{ item.title }}</span>
+			<span class="product__amount">Количество: {{ item.amount }}</span>
+			<span class="product__price">Цена: {{ item.price * item.amount }}</span>
+		</div>
+	</div>
+</section>
