@@ -1,5 +1,5 @@
 import { Component, Input } from "@angular/core";
-import { CartItem, Product } from "../../../types";
+import { CartItem } from "../../../types";
 import { Store } from "@ngrx/store";
 import { addToCart, removeFromCart } from "../../../store/cart.actions";
 import { decreaseAmount } from "./../../../store/cart.actions";

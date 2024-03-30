@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { ReactiveFormsModule } from "@angular/forms";
+import { ReactiveFormsModule, Validators } from "@angular/forms";
 import { FormBuilder } from "@angular/forms";
 import { Store } from "@ngrx/store";
 import { Observable, of, switchMap } from "rxjs";
@@ -36,9 +36,9 @@ export class CheckoutComponent {
 		);
 	}
 	public checkoutForm = this.formBuilder.group({
-		firstName: [""],
-		lastName: [""],
-		phone: [],
+		firstName: ["", Validators.required],
+		lastName: ["", Validators.required],
+		phone: [0, Validators.required],
 		delivery: ["pickup"],
 		pickupPoint: ["1"],
 		deliveryAddress: [""],
@@ -50,7 +50,6 @@ export class CheckoutComponent {
 			firstName,
 			lastName,
 			phone,
-			pickupPoint,
 			deliveryAddress,
 		} = this.checkoutForm.value;
 

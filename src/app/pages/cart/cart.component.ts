@@ -1,10 +1,9 @@
 import { Component } from "@angular/core";
 import { CartItemComponent } from "./cart-item/cart-item.component";
-import { Store, select } from "@ngrx/store";
-import { Observable, empty, from, map, of, reduce, scan, switchMap, take, tap } from "rxjs";
-import { CartItem, Product } from "../../types";
+import { Store } from "@ngrx/store";
+import { Observable, of, switchMap } from "rxjs";
+import { CartItem } from "../../types";
 import { CommonModule } from "@angular/common";
-import { selectCart } from "../../store/cart.selectors";
 import { RouterLink } from "@angular/router";
 
 @Component({
